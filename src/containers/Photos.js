@@ -7,7 +7,7 @@ import ShowPhoto from './ShowPhoto';
 class Photos extends React.Component {
 
   showPhotos=()=>{
-    console.log('propsy', this.props.data);
+    // console.log('propsy', this.props.data);
     return this.props.data.map( photo => {
       return <ShowPhoto key={photo.id} photo={photo} onPhotoSelect={this.props.onPhotoSelect} />
     })
@@ -23,7 +23,7 @@ class Photos extends React.Component {
 }
 
 function mapStateToProps(state){
-  console.log('stejt', state.displayPhotos);
+  // console.log('stejt', state.displayPhotos);
   return{
     data: state.displayPhotos
   }
