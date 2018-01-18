@@ -3,6 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import * as Actions from '../actions';
 
+import Photos from './Photos';
+
 function validate (values) {
   const errors = {};
 
@@ -38,6 +40,9 @@ class SearchBar extends React.Component {
                   <Field name='title' type='text' component={this.renderTextField} label='Searching for...' />
                   <button type='submit' className='btn btn-primary'>Search</button>
                 </form>
+                <div>
+                  <Photos />
+                </div>
               </div>
             </div>
           </div>
