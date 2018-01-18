@@ -9,7 +9,7 @@ class Photos extends React.Component {
   showPhotos=()=>{
     console.log('propsy', this.props.data);
     return this.props.data.map( photo => {
-      return <ShowPhoto key={photo.id} photo={photo} />
+      return <ShowPhoto key={photo.id} photo={photo} onPhotoSelect={this.props.onPhotoSelect} />
     })
   }
 

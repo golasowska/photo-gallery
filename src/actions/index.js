@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 export const DISPLAY_PHOTOS = 'DISPLAY_PHOTOS';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 const apiKey = '7b6170c348dd41415881242592ddaa4e';
 
@@ -21,5 +23,18 @@ export function fetchPhotos(values){
     ).catch(function(error){
       console.log(error.message);
     });
+  }
+}
+
+export function openModal (photo){
+  return {
+    type: OPEN_MODAL,
+    payload: photo
+  }
+}
+
+export function closeModal() {
+  return{
+    type: CLOSE_MODAL
   }
 }

@@ -10,9 +10,10 @@ export default class ShowPhoto extends React.Component{
     let source = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}.jpg`;
 
     return (
-      <div className='text-center card'>
-        <div className='text-center'>
-          <img className='photo_icon' alt={title} src={source}/>
+      <div className='photo-list'>
+        <div className='photo-item'>
+          <img className='' alt={title} src={source}
+          onClick={() => this.props.onPhotoSelect(this.props.photo)}/>
         </div>
       </div>
     )
