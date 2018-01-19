@@ -10,7 +10,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-  <App  aria-hidden='true' />
+  <App />
   </Provider>,
   document.getElementById('root'));
 registerServiceWorker();

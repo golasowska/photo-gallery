@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container-fluid'>
         <SearchBar />
         <Photos onPhotoSelect={ this.onPhotoSelect }/>
         <PhotoModal modalIsOpen= {this.props.modalIsOpen}

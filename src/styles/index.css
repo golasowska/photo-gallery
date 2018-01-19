@@ -8,21 +8,20 @@ body {
     box-shadow: 2px 2px 4px 0 #ccc;
     box-sizing: border-box;
     display: inline-block;
-    margin: 0 0 1.5em;
+    margin: 0 auto 1.5em;
     padding: 1em;
     position: relative;
+}
+
+.photo {
     width: 100%;
 }
 
-.photo-item img {
-    width: 100%;
-}
-
-.photo-list {
+/*.photo-list {
     font-size: .85em;
     margin: 1.5em 0;
     padding: 0;
-}
+}*/
 
 .photo-modal {
     left: 50%;
