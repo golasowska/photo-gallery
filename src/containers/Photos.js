@@ -15,7 +15,7 @@ class Photos extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className='photo-list'>
         {this.showPhotos()}
       </div>
     )
