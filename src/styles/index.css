@@ -8,6 +8,10 @@ body {
     width: 100%;
 }
 
+.photo:hover {
+  opacity: .75;
+}
+
 .photo-item {
     box-shadow: 2px 2px 4px 0 #ccc;
     box-sizing: border-box;
@@ -59,9 +63,20 @@ body {
 }
 
 .photo-modal {
-    left: 50%;
+    /*left: 50%;
     position: absolute;
     text-align: center;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 100%;
+    transform: translateX(-50%) translateY(-50%);*/
+}
+
+.photo-in-modal{
+  /*overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;*/
+}
+
+table.exif {
+margin: 0 auto;
 }

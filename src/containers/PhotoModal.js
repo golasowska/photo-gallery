@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import DisplayExif from './DisplayExif';
 
 const customStyles = {
   overlay : {
@@ -41,11 +42,14 @@ export default class PhotoModal extends React.Component{
         ariaHideApp={false}
         onRequestClose = { () => this.props.onRequestClose() } >
         <div className='photo-modal'>
-          <div>
-            <img src={ source } alt={title} />
+          <div className='text-center'>
+            <img className='photo-in-modal' src={ source } alt={title} />
           </div>
           <div className='text-center mt-4'>
             <button className='btn btn-primary' onClick={() => this.props.onRequestClose()}>close</button>
+          </div>
+          <div>
+            { (this.props.exif)? (<DisplayExif exif={this.props.exif} />) : null }
           </div>
           </div>
         </Modal>)
