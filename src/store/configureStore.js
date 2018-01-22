@@ -8,8 +8,7 @@ export function configureStore(initialState) {
     rootReducer,
     initialState,
     compose (
-      applyMiddleware(reduxThunk),
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__() : undefined
+      applyMiddleware(reduxThunk)
     )
   );
 
