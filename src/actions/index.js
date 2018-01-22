@@ -8,9 +8,10 @@ export const GET_EXIF = 'GET_EXIF';
 const apiKey = '7b6170c348dd41415881242592ddaa4e';
 
 
-export function fetchPhotos(values){
+export function fetchPhotos(values, counter){
   const value = values.title;
-  const pageNum = 1;
+  const pageNum = counter;
+  console.log('page numberrrrrrrr w actions', pageNum);
   return dispatch => {
     axios.get(`https://api.flickr.com/services/rest/?api_key=${apiKey}&method=flickr.photos.search&format=json&nojsoncallback=1&&per_page=50&page=${pageNum}&text=${value}`)
     .then(

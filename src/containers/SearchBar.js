@@ -16,7 +16,8 @@ function validate (values) {
 class SearchBar extends React.Component {
 
   handleFormSubmit = (values) => {
-    this.props.fetchPhotos(values);
+    const counter = 1;
+    this.props.fetchPhotos(values, counter);
   }
 
   renderTextField = ({ input, label, type, meta: { touched, error }}) => {
