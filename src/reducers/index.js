@@ -1,5 +1,9 @@
-import { combineReducers } from 'redux';
-import { reducer as FormReducer } from 'redux-form';
+import {
+  combineReducers
+} from 'redux';
+import {
+  reducer as FormReducer
+} from 'redux-form';
 import DisplayPhotosReducer from './displayPhotos';
 import ModalReducer from './modal';
 import ExifReducer from './exif';

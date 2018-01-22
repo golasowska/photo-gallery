@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import * as Actions from '../actions';
 import {connect} from 'react-redux';
 
@@ -8,37 +8,28 @@ import PhotoModal from './PhotoModal';
 
 class App extends Component {
 
-  onPhotoSelect = (photo) =>{
+  onPhotoSelect = (photo) => {
     this.props.openModal(photo);
     this.props.getExifData(photo.id);
-    console.log('propsiki exif ', this.props.exif);
   }
 
-  closeModal=()=>{
+  closeModal = () => {
     this.props.closeModal()
   }
 
   render() {
     return (
       <div className='container-fluid'>
-        <SearchBar />
-        <Photos onPhotoSelect={ this.onPhotoSelect }/>
-        <PhotoModal modalIsOpen= {this.props.modalIsOpen}
-          selectedPhoto = {this.props.selectedPhoto}
-          onRequestClose = {this.closeModal }
-          exif={this.props.exif} />
+        <SearchBar/>
+        <Photos onPhotoSelect={this.onPhotoSelect}/>
+        <PhotoModal modalIsOpen={this.props.modalIsOpen} selectedPhoto={this.props.selectedPhoto} onRequestClose={this.closeModal} exif={this.props.exif}/>
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  console.log('state exif', state.exif);
-  return{
-    modalIsOpen : state.modal.modalIsOpen,
-    selectedPhoto: state.modal.selectedPhoto,
-    exif: state.exif
-  }
+  return {modalIsOpen: state.modal.modalIsOpen, selectedPhoto: state.modal.selectedPhoto, exif: state.exif}
 }
 
-export default connect(mapStateToProps, Actions) (App);
+export default connect(mapStateToProps, Actions)(App);

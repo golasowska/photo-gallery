@@ -1,4 +1,8 @@
-import { createStore, compose, applyMiddleware } from 'redux';
+import {
+  createStore,
+  compose,
+  applyMiddleware
+} from 'redux';
 import reduxThunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
@@ -7,7 +11,7 @@ export function configureStore(initialState) {
   const store = createStore(
     rootReducer,
     initialState,
-    compose (
+    compose(
       applyMiddleware(reduxThunk)
     )
   );
