@@ -45,7 +45,7 @@ class Photos extends React.Component {
     if(
       (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) && this.props.data.length
     ) {
-      this.props.fetchPhotos(values, this.state.counter)
+      this.props.fetchScrollPhotos(values, this.state.counter)
     }
   }
 
