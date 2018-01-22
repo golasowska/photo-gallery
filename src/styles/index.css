@@ -62,21 +62,6 @@ body {
     }
 }
 
-.photo-modal {
-    /*left: 50%;
-    position: absolute;
-    text-align: center;
-    top: 100%;
-    transform: translateX(-50%) translateY(-50%);*/
-}
-
-.photo-in-modal{
-  /*overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;*/
-}
-
-table.exif {
-margin: 0 auto;
+table {
+  font-size: 12px;
 }

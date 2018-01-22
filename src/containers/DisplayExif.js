@@ -13,8 +13,8 @@ export default class DisplayExif extends React.Component{
   }
 
   render(){
-    return <div className='col col-md-8'>
-              <table className='offset-md-2 exif table-hover table table-sm table-bordered table-striped'>
+    return <div className='col col-md-8 mx-auto'>
+              <table className='table-hover table table-sm table-bordered table-striped'>
               <thead>
                 <tr className='col-md-8'>
                   <th colSpan='2' >Exchangeable Image File Format data</th>

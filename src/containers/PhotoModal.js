@@ -43,10 +43,10 @@ export default class PhotoModal extends React.Component{
         onRequestClose = { () => this.props.onRequestClose() } >
         <div className='photo-modal'>
           <div className='text-center'>
-            <img className='photo-in-modal' src={ source } alt={title} />
+            <img className='photo-in-modal col col-md-8' src={ source } alt={title} />
           </div>
           <div className='text-center mt-4'>
-            <button className='btn btn-primary' onClick={() => this.props.onRequestClose()}>close</button>
+            <button className='btn btn-primary mb-3' onClick={() => this.props.onRequestClose()}>close</button>
           </div>
           <div>
             { (this.props.exif)? (<DisplayExif exif={this.props.exif} />) : null }
