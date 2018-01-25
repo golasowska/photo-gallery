@@ -1,6 +1,6 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
-import {connect} from 'react-redux';
+import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 import * as Actions from '../actions';
 
 function validate(values) {
@@ -10,46 +10,52 @@ function validate(values) {
     errors.title = 'Please enter some word';
   }
   return errors;
-};
+}
 
 class SearchBar extends React.Component {
-
-  handleFormSubmit = (values) => {
+  handleFormSubmit = values => {
     const counter = 1;
     this.props.fetchPhotos(values, counter);
-  }
+  };
 
-  renderTextField = ({
-    input,
-    label,
-    type,
-    meta: {
-      touched,
-      error
-    }
-  }) => {
+  renderTextField = ({ input, label, type, meta: { touched, error } }) => {
     return (
-      <fieldset className='form-group'>
-        <label className='label-control mt-4'>{label}</label>
+      <fieldset className="form-group">
+        <label className="label-control mt-4">{label}</label>
         <div>
-          <input {...input} placeholder={label} className='form-control' type={type}/> {touched && error && <div className='help-block'>{error}</div>}
+          <input
+            {...input}
+            placeholder={label}
+            className="form-control"
+            type={type}
+          />{' '}
+          {touched && error && <div className="help-block">{error}</div>}
         </div>
-
       </fieldset>
-    )
-  }
+    );
+  };
 
   render() {
-    return <div className='row justify-content-center'>
-      <div className = 'col-10 col-sm-6 col-md-4';
->
-        <form onSubmit={this.props.handleSubmit(this.handleFormSubmit)}>
-          <Field name='title' type='text' component={this.renderTextField} label='Searching for...'/>
-          <button type='submit' className='btn btn-primary'>Search</button>
-        </form>
+    return (
+      <div className="row justify-content-center">
+        <div className="col-10 col-sm-6 col-md-4">
+          <form onSubmit={this.props.handleSubmit(this.handleFormSubmit)}>
+            <Field
+              name="title"
+              type="text"
+              component={this.renderTextField}
+              label="Searching for..."
+            />
+            <button type="submit" className="btn btn-primary">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    );
   }
 }
 
-export default connect(null, Actions)(reduxForm({form: 'searchBar', validate: validate})(SearchBar));
+export default connect(null, Actions)(
+  reduxForm({ form: 'searchBar', validate: validate })(SearchBar)
+);
