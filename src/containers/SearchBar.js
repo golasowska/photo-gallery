@@ -41,7 +41,8 @@ class SearchBar extends React.Component {
 
   render() {
     return <div className='row justify-content-center'>
-      <div className='col-10 col-sm-6 col-md-4'>
+      <div className = 'col-10 col-sm-6 col-md-4';
+>
         <form onSubmit={this.props.handleSubmit(this.handleFormSubmit)}>
           <Field name='title' type='text' component={this.renderTextField} label='Searching for...'/>
           <button type='submit' className='btn btn-primary'>Search</button>

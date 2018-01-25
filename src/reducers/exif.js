@@ -1,6 +1,4 @@
-import {
-  GET_EXIF
-} from '../actions';
+import { GET_EXIF } from '../actions';
 
 export default function exif(state = [], action) {
   switch (action.type) {

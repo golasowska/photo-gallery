@@ -1,7 +1,4 @@
-import {
-  DISPLAY_PHOTOS,
-  SCROLL_PHOTOS
-} from '../actions';
+import { DISPLAY_PHOTOS, SCROLL_PHOTOS } from '../actions';
 
 export default function display(state = [], action) {
   switch (action.type) {

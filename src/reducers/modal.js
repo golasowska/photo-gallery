@@ -1,7 +1,4 @@
-import {
-  OPEN_MODAL,
-  CLOSE_MODAL
-} from '../actions';
+import { OPEN_MODAL, CLOSE_MODAL } from '../actions';
 
 const initialState = {
   selectedPhoto: null,
